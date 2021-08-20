@@ -16,7 +16,7 @@
     <ion-searchbar placeholder="Procurar veículo" [(ngModel)]="termoDeBusca"></ion-searchbar>
 
     <ion-list>
-        <ion-item *ngFor="let veiculo of veiculos | filter:termoDeBusca">
+        <ion-item *ngFor="let veiculo of listaOrdenada() | filter:termoDeBusca">
             <ion-label>
                 <ion-text>
                     <h4><b>{{veiculo.modelo}}</b> {{veiculo.ano}}</h4>

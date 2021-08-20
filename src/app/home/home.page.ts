@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import sortBy from 'sort-by'
 
 @Component({
   selector: 'app-home',
@@ -28,6 +29,10 @@ export class HomePage {
 
     ]
 
+
+  }
+  listaOrdenada(){
+    return this.veiculos.sort(sortBy('modelo'));
   }
 
 }
